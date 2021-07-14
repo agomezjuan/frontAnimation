@@ -31,23 +31,21 @@ header .logo {
 /** Menú principal */
 nav ul {
     display: flex; 
+    flex-direction: column;
     justify-content: center;
     list-style: none;
-    flex-wrap: wrap;
     /* padding: 0px;
     margin-left: 10px;          NO son necesarias porque usamos flex*/
 }
 nav ul li {
-    margin: 20px;
+    margin: 10px;
 }
 nav ul li a{
     position:relative;
-    margin:15px;
-    font-size:25px;  
+    font-size:20px;  
     color:var(--secondary-color);
     text-decoration: none;
 }
-
 nav ul li a:before{
     content:'';
     background: var(--decoration-color);
@@ -98,7 +96,7 @@ nav ul li a:hover::before{
 
   /* Contenido */
 .container{
-    width: 80%;
+    width: 70%;
     margin: 5% auto;
 }
 
@@ -146,4 +144,25 @@ nav ul li a:hover::before{
         transform: rotate(360deg);
     }
 
+}
+
+/* mediaqueries */
+@media (min-width: 410px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+@media (min-width: 835px) {
+    nav ul li {
+        margin: 20px;
+    }
+    nav ul li a{
+        font-size:25px;
+        margin:15px;
+    }
+    .container{
+        width: 80%;
+        margin: 5% auto;
+    }
 }
