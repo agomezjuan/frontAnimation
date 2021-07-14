@@ -80,7 +80,7 @@ nav ul li a:hover::before{
     background: var(--primary-color);
     padding: 10px 15px;
     text-decoration: none;
-    /* transition: ; */
+    transition: padding 450ms;
 }
 
 .social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
@@ -90,8 +90,8 @@ nav ul li a:hover::before{
 .social ul li .icon-mail {background: #666666;}
 
 .social ul li a:hover{
-    /* transform: ; */
-    /* padding: ; */
+    background-color: var(--primary-color);
+    padding: 10px 30px;
 }
 
 
@@ -133,8 +133,16 @@ nav ul li a:hover::before{
     border-right: 10px solid rgb(66,139,202);
     border-bottom: 10px solid rgb(202, 66, 129);
     border-left: 10px solid rgba(66,139,202,.2);
-     /* animation: ; */
+    /* animation: ; */
+    animation-name: spin;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
  }
-/* keyframes
-    crear la animación con la rotación desde el momento 0 y momento 100
- */
+/* keyframes */
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
