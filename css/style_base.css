@@ -152,11 +152,11 @@ nav ul li a:hover::before{
         flex-direction: row;
         flex-wrap: wrap;
     }
-}
-@media (min-width: 835px) {
     nav ul li {
         margin: 20px;
     }
+}
+@media (min-width: 835px) {
     nav ul li a{
         font-size:25px;
         margin:15px;
